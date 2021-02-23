@@ -55,9 +55,17 @@ SQL pour chaque schema :
 même cours sur plusieurs semestres et seule
 la plus récente doit être enregistrée.
 
+CREATE TABLE professor (ssn varchar(8) , primary key (ssn));
 
-
-
+CREATE TABLE course(
+courseid varchar(8), primary key (courseid));
+ 
+ 
+ CREATE TABLE teaches (number numeric(12,2), primary key(number), 
+ ssn varchar(8), courseid varchar(8), 
+ foreign key(ssn) references professor,
+ foreign key(courseid) references course
+ );
 
 
 
@@ -66,11 +74,41 @@ la plus récente doit être enregistrée.
 un cours (ni plus, ni moins).
 
 
+CREATE TABLE professor (ssn varchar(8) , primary key (ssn));
+
+CREATE TABLE course(
+courseid varchar(8), primary key (courseid));
+ 
+  CREATE TABLE semester( semesterid varchar(8), primary key(semesterid));
+
+ 
+ CREATE TABLE teaches (number numeric(12,2), primary key(number), 
+ ssn varchar(8), courseid varchar(8), semesterid varchar(8),
+ foreign key(ssn) references professor,
+ foreign key(courseid) references course,
+ foreign key(semesterid) references semester
+ );
+
+
 
 5) Les professeurs peuvent enseigner le
 même cours sur plusieurs semestres et
 chaque doit être enregistrée.
 
+CREATE TABLE professor (ssn varchar(8) , primary key (ssn));
+
+CREATE TABLE course(
+courseid varchar(8), primary key (courseid));
+ 
+  CREATE TABLE semester( semesterid varchar(8), primary key(semesterid));
+
+ 
+ CREATE TABLE teaches (number numeric(12,2), primary key(number), 
+ ssn varchar(8), courseid varchar(8), semesterid varchar(8),
+ foreign key(ssn) references professor,
+ foreign key(courseid) references course,
+ foreign key(semesterid) references semester
+ );
 
 
 6) Supposons maintenant que certains cours
@@ -83,6 +121,17 @@ ensembles d'entités et des ensembles de
 relations supplémentaires si nécessaire.
 
 
+CREATE TABLE professor (ssn varchar(8) , primary key (ssn));
+
+CREATE TABLE course(
+courseid varchar(8), primary key (courseid));
+
+ 
+ CREATE TABLE teaches (number numeric(12,2), primary key(number), 
+ ssn varchar(8), courseid varchar(8), semesterid varchar(8),
+ foreign key(ssn) references professor,
+ foreign key(courseid) references course,
+ );
 
 
 
