@@ -1,7 +1,7 @@
 # csi2532_playground
  
 Lab 06  CSI2532 Uottawa 
-Introduction à GIT 
+
 Andie SAMADOULOUGOU 300209487
 
 **Les fichiers SQL ont aussi été push dans GITHUB **
