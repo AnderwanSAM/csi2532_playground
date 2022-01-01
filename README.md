@@ -1,8 +1,9 @@
 # csi2532_playground
  
-Lab1 CSI2532 Uottawa 
-Introduction à GIT 
-Andie SAMADOULOUGOU 300209487
+Labs CSI2532 Uottawa 
+Introduction à GIT et exercices 
+Consultez les autres branches!
+
+Andie SAMADOULOUGOU 
 
 
-lab4 Liens vers les diagrammes 
